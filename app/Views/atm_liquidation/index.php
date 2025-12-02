@@ -1,0 +1,396 @@
+<?= $this->extend('layouts/main') ?>
+
+<?= $this->section('content') ?>
+
+<!-- Page Header -->
+<div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
+    <div>
+        <h1 class="text-xl lg:text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <i class="bi bi-credit-card text-green-600 mr-3"></i>
+            ATM Liquidations
+        </h2>
+        <p class="text-gray-600 mt-2 text-sm">Monitor ATM-based scholarship liquidation batches and automated workflows</p>
+    </div>
+    
+    <div class="relative inline-block text-left">
+        <button type="button" id="createDropdown" class="inline-flex items-center bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <i class="bi bi-plus-circle mr-2"></i>
+            Create New Liquidation
+            <i class="bi bi-chevron-down ml-2"></i>
+        </button>
+        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-64 rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+            <div class="py-1">
+                <a href="<?= base_url('atm-liquidation/create') ?>" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors">
+                    <i class="bi bi-person-plus text-green-600 mr-3 text-lg"></i>
+                    <div>
+                        <div class="font-semibold">Per Recipient</div>
+                        <div class="text-xs text-gray-500">Create single liquidation</div>
+                    </div>
+                </a>
+                <a href="<?= base_url('atm-liquidation/batch-upload') ?>" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors">
+                    <i class="bi bi-file-earmark-spreadsheet text-green-600 mr-3 text-lg"></i>
+                    <div>
+                        <div class="font-semibold">Batch Upload</div>
+                        <div class="text-xs text-gray-500">Upload CSV/Excel file</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Filters -->
+<div class="bg-white rounded-2xl shadow-lg border border-green-200/20 mb-6">
+    <div class="p-6">
+        <form method="GET" action="<?= base_url('atm-liquidation') ?>" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent" name="status">
+                    <option value="">All Status</option>
+                    <option value="uploaded" <?= (isset($filters['status']) && $filters['status'] === 'uploaded') ? 'selected' : '' ?>>Uploaded</option>
+                    <option value="processing" <?= (isset($filters['status']) && $filters['status'] === 'processing') ? 'selected' : '' ?>>Processing</option>
+                    <option value="processed" <?= (isset($filters['status']) && $filters['status'] === 'processed') ? 'selected' : '' ?>>Processed</option>
+                    <option value="sent_to_chairman" <?= (isset($filters['status']) && $filters['status'] === 'sent_to_chairman') ? 'selected' : '' ?>>Sent to Chairman</option>
+                    <option value="approved" <?= (isset($filters['status']) && $filters['status'] === 'approved') ? 'selected' : '' ?>>Approved</option>
+                    <option value="sent_to_accounting" <?= (isset($filters['status']) && $filters['status'] === 'sent_to_accounting') ? 'selected' : '' ?>>Sent to Accounting</option>
+                    <option value="completed" <?= (isset($filters['status']) && $filters['status'] === 'completed') ? 'selected' : '' ?>>Completed</option>
+                    <option value="rejected" <?= (isset($filters['status']) && $filters['status'] === 'rejected') ? 'selected' : '' ?>>Rejected</option>
+                </select>
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Semester</label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent" name="semester">
+                    <option value="">All Semesters</option>
+                    <option value="1st Semester" <?= (isset($filters['semester']) && $filters['semester'] === '1st Semester') ? 'selected' : '' ?>>1st Semester</option>
+                    <option value="2nd Semester" <?= (isset($filters['semester']) && $filters['semester'] === '2nd Semester') ? 'selected' : '' ?>>2nd Semester</option>
+                    <option value="Summer" <?= (isset($filters['semester']) && $filters['semester'] === 'Summer') ? 'selected' : '' ?>>Summer</option>
+                </select>
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Academic Year</label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent" name="academic_year">
+                    <option value="">All Years</option>
+                    <option value="2023-2024" <?= (isset($filters['academic_year']) && $filters['academic_year'] === '2023-2024') ? 'selected' : '' ?>>2023-2024</option>
+                    <option value="2024-2025" <?= (isset($filters['academic_year']) && $filters['academic_year'] === '2024-2025') ? 'selected' : '' ?>>2024-2025</option>
+                    <option value="2025-2026" <?= (isset($filters['academic_year']) && $filters['academic_year'] === '2025-2026') ? 'selected' : '' ?>>2025-2026</option>
+                </select>
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">&nbsp;</label>
+                <div class="flex gap-2">
+                    <button type="submit" class="flex items-center px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-colors">
+                        <i class="bi bi-funnel mr-2"></i>
+                        Filter
+                    </button>
+                    <a href="<?= base_url('atm-liquidation') ?>" class="flex items-center px-4 py-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="bi bi-arrow-clockwise mr-2"></i>
+                        Reset
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Tab Navigation -->
+<div class="bg-white rounded-t-2xl shadow-lg border-b-0 border border-green-200/20">
+    <div class="flex border-b border-gray-200">
+        <button onclick="switchTab('individual')" id="tab-individual" class="tab-btn active px-6 py-4 text-sm font-semibold text-green-600 border-b-2 border-green-600 focus:outline-none">
+            <i class="bi bi-person mr-2"></i>Individual Records
+        </button>
+        <button onclick="switchTab('batch')" id="tab-batch" class="tab-btn px-6 py-4 text-sm font-semibold text-gray-500 hover:text-gray-700 border-b-2 border-transparent focus:outline-none">
+            <i class="bi bi-file-earmark-spreadsheet mr-2"></i>Batch Records
+        </button>
+    </div>
+</div>
+
+<!-- Individual Liquidations Table -->
+<div id="content-individual" class="tab-content bg-white rounded-b-2xl shadow-lg border border-t-0 border-green-200/20">
+    <div class="p-6 border-b border-gray-200">
+        <h5 class="text-xl font-semibold text-gray-800 flex items-center">
+            <i class="bi bi-person text-green-600 mr-3"></i>
+            Individual ATM Liquidations
+            <?php 
+            $individualRecords = array_filter($liquidations ?? [], function($liq) {
+                return empty($liq['atm_liquidation_id']);
+            });
+            ?>
+            <span class="bg-green-600 text-white text-sm px-3 py-1 rounded-full ml-3"><?= count($individualRecords) ?> records</span>
+        </h5>
+    </div>
+    <div class="p-6">
+        <?php if (!empty($individualRecords)): ?>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200 data-table-individual">
+                <thead class="bg-gradient-to-r from-green-600 to-green-700">
+                    <tr>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">ID</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Recipient</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Amount</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Transaction Date</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Reference</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Status</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <?php foreach ($individualRecords as $liquidation): ?>
+                    <tr class="hover:bg-green-50/20 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#<?= esc($liquidation['id']) ?></td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-semibold text-gray-900"><?= esc($liquidation['recipient_name']) ?></div>
+                            <div class="text-xs text-gray-500"><?= esc($liquidation['recipient_code']) ?></div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-bold text-gray-900">₱<?= number_format($liquidation['amount'], 2) ?></div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?= date('M j, Y', strtotime($liquidation['transaction_date'])) ?></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?= esc($liquidation['reference_number'] ?? 'N/A') ?></td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <?php 
+                            $statusClass = '';
+                            $statusText = ucfirst(str_replace('_', ' ', $liquidation['status']));
+                            switch ($liquidation['status']) {
+                                case 'verified':
+                                    $statusClass = 'bg-blue-100 text-blue-800';
+                                    break;
+                                case 'approved':
+                                    $statusClass = 'bg-green-100 text-green-800';
+                                    break;
+                                case 'rejected':
+                                    $statusClass = 'bg-red-100 text-red-800';
+                                    break;
+                                default:
+                                    $statusClass = 'bg-gray-100 text-gray-800';
+                            }
+                            ?>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium <?= $statusClass ?>">
+                                <?= esc($statusText) ?>
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                            <div class="flex items-center space-x-2">
+                                <a href="<?= base_url('atm-liquidation/show/' . $liquidation['id']) ?>" 
+                                   class="inline-flex items-center justify-center w-8 h-8 text-blue-600 bg-blue-100 rounded-full hover:bg-blue-200 transition-colors" 
+                                   title="View Details">
+                                    <i class="bi bi-eye text-sm"></i>
+                                </a>
+                                
+                                <?php if (!empty($liquidation['file_path'])): ?>
+                                <a href="<?= base_url('atm-liquidation/download-file/' . $liquidation['id']) ?>" 
+                                   class="inline-flex items-center justify-center w-8 h-8 text-purple-600 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors" 
+                                   title="Download File">
+                                    <i class="bi bi-download text-sm"></i>
+                                </a>
+                                <?php endif; ?>
+                            </div>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php else: ?>
+        <div class="text-center py-12">
+            <i class="bi bi-person text-6xl text-gray-300 mb-4"></i>
+            <h5 class="text-xl font-semibold text-gray-700 mb-2">No individual liquidations found</h5>
+            <p class="text-gray-500 mb-6">Start by creating a new individual ATM liquidation record.</p>
+            <a href="<?= base_url('atm-liquidation/create') ?>" 
+               class="inline-flex items-center bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all transform hover:-translate-y-1">
+                <i class="bi bi-plus-circle mr-2"></i>Create Individual Liquidation
+            </a>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>
+
+<!-- Batch Liquidations Table -->
+<div id="content-batch" class="tab-content hidden bg-white rounded-b-2xl shadow-lg border border-t-0 border-green-200/20">
+    <div class="p-6 border-b border-gray-200">
+        <h5 class="text-xl font-semibold text-gray-800 flex items-center">
+            <i class="bi bi-file-earmark-spreadsheet text-green-600 mr-3"></i>
+            Batch ATM Liquidations
+            <span class="bg-green-600 text-white text-sm px-3 py-1 rounded-full ml-3"><?= count($batches ?? []) ?> batches</span>
+        </h5>
+    </div>
+    <div class="p-6">
+        <?php if (!empty($batches)): ?>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200 data-table-batch">
+                <thead class="bg-gradient-to-r from-blue-600 to-blue-700">
+                    <tr>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Batch ID</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Batch Name</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Recipients</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Total Amount</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Semester / Year</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Uploaded By</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Status</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Created</th>
+                        <th class="px-6 py-4 text-left text-xs font-medium text-white uppercase tracking-wider">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <?php foreach ($batches as $batch): ?>
+                    <tr class="hover:bg-blue-50/20 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                #<?= esc($batch['id']) ?>
+                            </span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm font-semibold text-gray-900"><?= esc($batch['batch_name']) ?></div>
+                            <?php if (!empty($batch['remarks'])): ?>
+                            <div class="text-xs text-gray-500 mt-1 max-w-xs truncate"><?= esc($batch['remarks']) ?></div>
+                            <?php endif; ?>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-bold text-gray-900"><?= esc($batch['recipient_count']) ?> recipients</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-bold text-gray-900">₱<?= number_format($batch['total_amount'], 2) ?></div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900"><?= esc($batch['semester']) ?></div>
+                            <div class="text-xs text-gray-500"><?= esc($batch['academic_year']) ?></div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900"><?= esc($batch['uploader_name']) ?></div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <?php 
+                            $statusClass = '';
+                            $statusText = ucfirst(str_replace('_', ' ', $batch['status']));
+                            switch ($batch['status']) {
+                                case 'uploaded':
+                                    $statusClass = 'bg-gray-100 text-gray-800';
+                                    break;
+                                case 'processing':
+                                    $statusClass = 'bg-yellow-100 text-yellow-800';
+                                    break;
+                                case 'processed':
+                                    $statusClass = 'bg-blue-100 text-blue-800';
+                                    break;
+                                case 'approved':
+                                    $statusClass = 'bg-green-100 text-green-800';
+                                    break;
+                                case 'rejected':
+                                    $statusClass = 'bg-red-100 text-red-800';
+                                    break;
+                                default:
+                                    $statusClass = 'bg-gray-100 text-gray-800';
+                            }
+                            ?>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium <?= $statusClass ?>">
+                                <?= esc($statusText) ?>
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?= date('M j, Y', strtotime($batch['created_at'])) ?></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                            <div class="flex items-center space-x-2">
+                                <a href="<?= base_url('atm-liquidation/view-batch/' . $batch['id']) ?>" 
+                                   class="inline-flex items-center justify-center w-8 h-8 text-blue-600 bg-blue-100 rounded-full hover:bg-blue-200 transition-colors" 
+                                   title="View Batch Details">
+                                    <i class="bi bi-eye text-sm"></i>
+                                </a>
+                                
+                                <?php if (!empty($batch['file_path'])): ?>
+                                <a href="<?= base_url('atm-liquidation/download-batch-file/' . $batch['id']) ?>" 
+                                   class="inline-flex items-center justify-center w-8 h-8 text-purple-600 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors" 
+                                   title="Download File">
+                                    <i class="bi bi-download text-sm"></i>
+                                </a>
+                                <?php endif; ?>
+                            </div>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+        <?php else: ?>
+        <div class="text-center py-12">
+            <i class="bi bi-file-earmark-spreadsheet text-6xl text-gray-300 mb-4"></i>
+            <h5 class="text-xl font-semibold text-gray-700 mb-2">No batch liquidations found</h5>
+            <p class="text-gray-500 mb-6">Upload a CSV or Excel file to create batch liquidations.</p>
+            <a href="<?= base_url('atm-liquidation/batch-upload') ?>" 
+               class="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all transform hover:-translate-y-1">
+                <i class="bi bi-upload mr-2"></i>Upload Batch File
+            </a>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>
+<script>
+$(document).ready(function() {
+    // Initialize DataTables with custom styling
+    $('.data-table-individual').DataTable({
+        order: [[0, 'desc']],
+        pageLength: 25,
+        responsive: true,
+        columnDefs: [
+            { orderable: false, targets: -1 }
+        ],
+        dom: 'rtip',
+        language: {
+            paginate: {
+                previous: '<i class="bi bi-chevron-left"></i>',
+                next: '<i class="bi bi-chevron-right"></i>'
+            }
+        }
+    });
+    
+    $('.data-table-batch').DataTable({
+        order: [[0, 'desc']],
+        pageLength: 25,
+        responsive: true,
+        columnDefs: [
+            { orderable: false, targets: -1 }
+        ],
+        dom: 'rtip',
+        language: {
+            paginate: {
+                previous: '<i class="bi bi-chevron-left"></i>',
+                next: '<i class="bi bi-chevron-right"></i>'
+            }
+        }
+    });
+    
+    // Style DataTable pagination
+    setTimeout(function() {
+        $('.dataTables_paginate .paginate_button').addClass('px-3 py-2 mx-1 text-sm text-gray-500 border border-gray-300 rounded-lg hover:bg-green-50 hover:text-green-600 hover:border-green-300 transition-colors');
+        $('.dataTables_paginate .paginate_button.current').addClass('bg-green-primary text-white border-green-primary').removeClass('text-gray-500 border-gray-300');
+    }, 100);
+    
+    // Dropdown toggle
+    $('#createDropdown').on('click', function(e) {
+        e.stopPropagation();
+        $('#dropdownMenu').toggleClass('hidden');
+    });
+    
+    // Close dropdown when clicking outside
+    $(document).on('click', function() {
+        $('#dropdownMenu').addClass('hidden');
+    });
+});
+
+function switchTab(tab) {
+    // Hide all tab contents
+    $('.tab-content').addClass('hidden');
+    // Remove active class from all tabs
+    $('.tab-btn').removeClass('active text-green-600 border-green-600').addClass('text-gray-500 border-transparent');
+    
+    // Show selected tab content
+    $('#content-' + tab).removeClass('hidden');
+    // Add active class to selected tab
+    $('#tab-' + tab).addClass('active text-green-600 border-green-600').removeClass('text-gray-500 border-transparent');
+}
+</script>
+<?= $this->endSection() ?>

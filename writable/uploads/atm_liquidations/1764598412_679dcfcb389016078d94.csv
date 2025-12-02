@@ -1,0 +1,4 @@
+recipient_code,transaction_date,amount,reference_number
+2021-00001,2025-12-01,5000.00,REF-12345
+2021-00002,2025-12-01,5000.00,REF-12346
+2021-00003,2025-12-01,5000.00,REF-12347
