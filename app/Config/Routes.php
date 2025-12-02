@@ -166,3 +166,13 @@ $routes->group('scholarship-coordinator', function($routes) {
     $routes->post('update-status', 'ScholarshipCoordinatorController::updateLiquidationStatus');
     $routes->get('reports', 'ScholarshipCoordinatorController::reports');
 });
+
+// Admin Reports routes
+$routes->group('admin', function($routes) {
+    $routes->get('reports', 'ReportsController::index');
+    $routes->post('reports/export', 'ReportsController::export');
+});
+
+// Alternative route for direct access
+$routes->get('reports', 'ReportsController::index');
+$routes->post('reports/export', 'ReportsController::export');

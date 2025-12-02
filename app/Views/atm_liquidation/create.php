@@ -243,18 +243,30 @@
                         </div>
                         
                         <!-- File Preview Container -->
-                        <div id="file-preview" class="mt-4 bg-green-50 border border-green-200 rounded-lg p-4 hidden">
+                        <div id="file-preview" class="mt-4 bg-gradient-to-r from-green-50 to-green-100 border border-green-300 rounded-xl p-6 hidden shadow-sm">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
-                                    <div id="file-icon" class="mr-3 text-2xl"></div>
-                                    <div>
-                                        <div id="file-name" class="font-medium text-green-900"></div>
-                                        <div id="file-size" class="text-sm text-green-700"></div>
+                                    <div id="file-icon" class="mr-4 text-3xl"></div>
+                                    <div class="flex-1">
+                                        <div id="file-name" class="font-semibold text-green-900 text-lg mb-1"></div>
+                                        <div class="flex items-center space-x-4">
+                                            <div id="file-size" class="text-sm text-green-700"></div>
+                                            <div id="file-type" class="text-xs text-green-600 bg-green-200 px-2 py-1 rounded-full font-medium"></div>
+                                        </div>
+                                        <div class="flex items-center mt-2">
+                                            <i class="bi bi-check-circle-fill text-green-600 mr-1"></i>
+                                            <span class="text-xs text-green-700 font-medium">File uploaded successfully</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <button type="button" id="remove-file" class="text-red-600 hover:text-red-800 transition-colors" title="Remove file">
-                                    <i class="bi bi-x-circle text-lg"></i>
-                                </button>
+                                <div class="flex flex-col space-y-2">
+                                    <button type="button" id="preview-file" class="text-blue-600 hover:text-blue-800 transition-colors p-2 hover:bg-blue-50 rounded-lg" title="Preview file">
+                                        <i class="bi bi-eye text-lg"></i>
+                                    </button>
+                                    <button type="button" id="remove-file" class="text-red-600 hover:text-red-800 transition-colors p-2 hover:bg-red-50 rounded-lg" title="Remove file">
+                                        <i class="bi bi-x-circle text-lg"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -489,26 +501,42 @@ $(document).ready(function() {
         hideFilePreview();
     });
     
+    // Preview file handler  
+    $(document).on('click', '#preview-file', function() {
+        if (fileInput[0].files && fileInput[0].files.length > 0) {
+            previewFile(fileInput[0].files[0]);
+        }
+    });
+    
     function showFilePreview(file) {
         const fileName = file.name;
         const fileSize = formatFileSize(file.size);
         const extension = '.' + fileName.split('.').pop().toLowerCase();
         
-        // Set file icon based on extension
+        // Set file icon and type based on extension
         let icon = '';
+        let fileType = '';
         if (extension === '.csv') {
             icon = '<i class="bi bi-file-earmark-text text-green-600"></i>';
-        } else if (extension === '.xlsx' || extension === '.xls') {
+            fileType = 'CSV File';
+        } else if (extension === '.xlsx') {
             icon = '<i class="bi bi-file-earmark-excel text-green-600"></i>';
+            fileType = 'Excel (XLSX)';
+        } else if (extension === '.xls') {
+            icon = '<i class="bi bi-file-earmark-excel text-green-600"></i>';
+            fileType = 'Excel (XLS)';
         } else if (extension === '.pdf') {
             icon = '<i class="bi bi-file-earmark-pdf text-red-600"></i>';
+            fileType = 'PDF Document';
         } else {
             icon = '<i class="bi bi-file-earmark text-gray-600"></i>';
+            fileType = 'Unknown';
         }
         
         $('#file-icon').html(icon);
         $('#file-name').text(fileName);
         $('#file-size').text(fileSize);
+        $('#file-type').text(fileType);
         $('#file-preview').removeClass('hidden');
     }
     
@@ -537,6 +565,86 @@ $(document).ready(function() {
         const extension = '.' + file.name.split('.').pop().toLowerCase();
         
         return (allowedTypes.includes(file.type) || allowedExtensions.includes(extension)) && file.size <= maxSize;
+    }
+    
+    function previewFile(file) {
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            let content = e.target.result;
+            let previewContent = '';
+            
+            if (file.name.toLowerCase().endsWith('.csv')) {
+                // For CSV files, show first few lines
+                const lines = content.split('\\n').slice(0, 5);
+                previewContent = '<pre class="text-sm bg-gray-100 p-3 rounded overflow-x-auto">' + lines.join('\\n') + '\\n... (showing first 5 lines)</pre>';
+            } else if (file.name.toLowerCase().endsWith('.pdf')) {
+                previewContent = '<div class="text-sm text-gray-600"><p><strong>File Type:</strong> PDF Document</p><p><strong>Note:</strong> PDF preview requires opening the file. The file will be processed during form submission.</p></div>';
+            } else {
+                // For Excel files, show file info
+                previewContent = '<div class="text-sm text-gray-600"><p><strong>File Type:</strong> Excel file</p><p><strong>Note:</strong> Excel files will be processed during upload. Preview not available for Excel files.</p></div>';
+            }
+            
+            // Create a modal to show preview
+            const modal = $(`
+                <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="filePreviewModal">
+                    <div class="bg-white rounded-xl shadow-xl max-w-4xl w-full m-4 max-h-96 overflow-hidden">
+                        <div class="p-4 bg-green-600 text-white flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">File Preview: ${file.name}</h3>
+                            <button type="button" class="text-white hover:text-gray-200" id="closePreviewModal">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+                        <div class="p-6 overflow-y-auto max-h-80">
+                            ${previewContent}
+                        </div>
+                    </div>
+                </div>
+            `);
+            
+            $('body').append(modal);
+            
+            // Close modal handlers
+            $('#closePreviewModal, #filePreviewModal').on('click', function(e) {
+                if (e.target === this) {
+                    modal.remove();
+                }
+            });
+        };
+        
+        if (file.name.toLowerCase().endsWith('.pdf')) {
+            // For PDF files, don't try to read as text
+            const modal = $(`
+                <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="filePreviewModal">
+                    <div class="bg-white rounded-xl shadow-xl max-w-md w-full m-4">
+                        <div class="p-4 bg-green-600 text-white flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">PDF File: ${file.name}</h3>
+                            <button type="button" class="text-white hover:text-gray-200" id="closePreviewModal">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center">
+                                <i class="bi bi-file-earmark-pdf text-6xl text-red-600 mb-4"></i>
+                                <p class="text-gray-600 mb-4">PDF file selected successfully.</p>
+                                <p class="text-sm text-gray-500">The file will be processed when you submit the form.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+            
+            $('body').append(modal);
+            
+            $('#closePreviewModal, #filePreviewModal').on('click', function(e) {
+                if (e.target === this) {
+                    modal.remove();
+                }
+            });
+        } else {
+            reader.readAsText(file);
+        }
     }
     
 

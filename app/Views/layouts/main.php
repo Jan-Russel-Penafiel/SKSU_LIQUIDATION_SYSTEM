@@ -278,24 +278,6 @@
                         <span class="font-medium text-sm">Manual Liquidations</span>
                     </a>
                     
-                    <a href="<?= base_url('manual-liquidation/entry-by-recipient') ?>" 
-                       class="flex items-center px-3 py-1.5 ml-3 text-green-100 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <i class="bi bi-person mr-2 text-green-300 text-sm"></i>
-                        <span class="text-sm">Entry by Recipient</span>
-                    </a>
-                    
-                    <a href="<?= base_url('manual-liquidation/entry-by-campus') ?>" 
-                       class="flex items-center px-3 py-1.5 ml-3 text-green-100 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <i class="bi bi-building mr-2 text-green-300 text-sm"></i>
-                        <span class="text-sm">Entry by Campus</span>
-                    </a>
-                    
-                    <a href="<?= base_url('manual-liquidation/entry-by-officer') ?>" 
-                       class="flex items-center px-3 py-1.5 ml-3 text-green-100 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <i class="bi bi-people mr-2 text-green-300 text-sm"></i>
-                        <span class="text-sm">Entry by Officer</span>
-                    </a>
-                    
                     <div class="pt-2">
                         <h6 class="px-3 py-1 text-xs font-semibold text-green-200 uppercase tracking-wider">ATM System</h6>
                     </div>
@@ -304,18 +286,6 @@
                        class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= strpos(uri_string(), 'atm-liquidation') !== false ? 'bg-white/20 shadow-md' : '' ?>">
                         <i class="bi bi-credit-card mr-2 text-green-200 text-sm"></i>
                         <span class="font-medium text-sm">ATM Liquidations</span>
-                    </a>
-                    
-                    <a href="<?= base_url('atm-liquidation/create') ?>" 
-                       class="flex items-center px-3 py-1.5 ml-3 text-green-100 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <i class="bi bi-person mr-2 text-green-300 text-sm"></i>
-                        <span class="text-sm">Per Recipient</span>
-                    </a>
-                    
-                    <a href="<?= base_url('atm-liquidation/batch-upload') ?>" 
-                       class="flex items-center px-3 py-1.5 ml-3 text-green-100 rounded-lg hover:bg-white/10 transition-all duration-200">
-                        <i class="bi bi-file-earmark-spreadsheet mr-2 text-green-300 text-sm"></i>
-                        <span class="text-sm">Batch Upload</span>
                     </a>
                     
                     <div class="pt-2">
@@ -338,6 +308,12 @@
                        class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= strpos(uri_string(), 'accounts') !== false ? 'bg-white/20 shadow-md' : '' ?>">
                         <i class="bi bi-people mr-2 text-green-200 text-sm"></i>
                         <span class="font-medium text-sm">Account Management</span>
+                    </a>
+                    
+                    <a href="<?= base_url('reports') ?>" 
+                       class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= strpos(uri_string(), 'reports') !== false ? 'bg-white/20 shadow-md' : '' ?>">
+                        <i class="bi bi-file-earmark-bar-graph-fill mr-2 text-green-200 text-sm"></i>
+                        <span class="font-medium text-sm">Admin Reports</span>
                     </a>
                     <?php endif; ?>
                     
