@@ -187,7 +187,13 @@
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="text-sm text-gray-900"><?= esc($batch['uploader_name']) ?></div>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?= date('M j, Y', strtotime($batch['approved_at'])) ?></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <?php if (!empty($batch['approved_at'])): ?>
+                                <?= date('M j, Y', strtotime($batch['approved_at'])) ?>
+                            <?php else: ?>
+                                <span class="text-gray-400">N/A</span>
+                            <?php endif; ?>
+                        </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                             <div class="flex items-center space-x-2">
                                 <a href="<?= base_url('chairman/atm/batch/' . $batch['id']) ?>" 

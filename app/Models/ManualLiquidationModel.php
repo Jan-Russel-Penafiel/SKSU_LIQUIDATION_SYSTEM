@@ -93,6 +93,10 @@ class ManualLiquidationModel extends Model
             $builder->where('ml.disbursing_officer_id', $filters['disbursing_officer']);
         }
 
+        if (isset($filters['scholarship_coordinator']) && !empty($filters['scholarship_coordinator'])) {
+            $builder->where('ml.scholarship_coordinator_id', $filters['scholarship_coordinator']);
+        }
+
         if (isset($filters['semester']) && !empty($filters['semester'])) {
             $builder->where('ml.semester', $filters['semester']);
         }

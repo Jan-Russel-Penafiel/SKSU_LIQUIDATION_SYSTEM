@@ -25,6 +25,8 @@ class AuthController extends BaseController
                     return redirect()->to('/chairman');
                 case 'accounting_officer':
                     return redirect()->to('/accounting');
+                case 'scholarship_coordinator':
+                    return redirect()->to('/scholarship-coordinator');
                 default:
                     return redirect()->to('/dashboard');
             }
@@ -74,6 +76,8 @@ class AuthController extends BaseController
                 return redirect()->to('/chairman');
             case 'accounting_officer':
                 return redirect()->to('/accounting');
+            case 'scholarship_coordinator':
+                return redirect()->to('/scholarship-coordinator');
             default:
                 return redirect()->to('/dashboard');
         }

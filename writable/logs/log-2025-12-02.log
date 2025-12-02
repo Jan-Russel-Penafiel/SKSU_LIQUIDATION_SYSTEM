@@ -339,3 +339,1125 @@ DEBUG - 2025-12-02 05:12:19 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-12-02 05:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-12-02 05:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-12-02 05:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-02 05:20:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "accounting/view_manual_liquidation.php"
+[Method: GET, Route: accounting/manual/8]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('accounting/view_manual_liquidation.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('accounting/view_manual_liquidation', [], true)
+ 3 APPPATH\Controllers\AccountingController.php(137): view('accounting/view_manual_liquidation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->viewManualLiquidation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 05:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 05:35:28 --> mysqli_sql_exception: Unknown column 'al.created_by' in 'on clause' in C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ald`.*,...', 0)
+#1 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ald`.*,...')
+#2 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ald`.*,...')
+#3 C:\xampp\htdocs\sksu_liquid\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*,...', Array, false)
+#4 C:\xampp\htdocs\sksu_liquid\app\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sksu_liquid\app\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients(Array)
+#6 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+#7 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+#8 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sksu_liquid\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sksu_liquid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\sksu_liquid\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-02 05:35:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'al.created_by' in 'on clause'
+[Method: GET, Route: accounting/atm-approved]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = :ald.status:
+ORDER BY `ald`.`created_at` DESC', [...], false)
+ 2 APPPATH\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:35:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'al.created_by' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = :ald.status:
+ORDER BY `ald`.`created_at` DESC', [...], false)
+ 4 APPPATH\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:35:28 --> [Caused by] mysqli_sql_exception: Unknown column 'al.created_by' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = :ald.status:
+ORDER BY `ald`.`created_at` DESC', [...], false)
+ 5 APPPATH\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 05:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 05:35:54 --> mysqli_sql_exception: Unknown column 'al.created_by' in 'on clause' in C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ald`.*,...', 0)
+#1 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ald`.*,...')
+#2 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ald`.*,...')
+#3 C:\xampp\htdocs\sksu_liquid\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*,...', Array, false)
+#4 C:\xampp\htdocs\sksu_liquid\app\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sksu_liquid\app\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients(Array)
+#6 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+#7 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+#8 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sksu_liquid\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sksu_liquid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\sksu_liquid\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-02 05:35:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'al.created_by' in 'on clause'
+[Method: GET, Route: accounting/atm-approved]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = :ald.status:
+ORDER BY `ald`.`created_at` DESC', [...], false)
+ 2 APPPATH\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:35:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'al.created_by' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = :ald.status:
+ORDER BY `ald`.`created_at` DESC', [...], false)
+ 4 APPPATH\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:35:54 --> [Caused by] mysqli_sql_exception: Unknown column 'al.created_by' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = \'approved\'
+ORDER BY `ald`.`created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ald`.*, `sr`.`recipient_id` as `recipient_code`, CONCAT(sr.first_name, " ", sr.last_name) as recipient_name, `sr`.`first_name`, `sr`.`last_name`, `sr`.`middle_name`, `sr`.`campus`, `al`.`batch_name`, `al`.`file_type`, `al`.`status` as `batch_status`, `u`.`username` as `uploader_name`
+FROM `atm_liquidation_details` `ald`
+LEFT JOIN `scholarship_recipients` `sr` ON `ald`.`recipient_id` = `sr`.`id`
+LEFT JOIN `atm_liquidations` `al` ON `ald`.`atm_liquidation_id` = `al`.`id`
+LEFT JOIN `users` `u` ON `al`.`created_by` = `u`.`id`
+WHERE `ald`.`status` = :ald.status:
+ORDER BY `ald`.`created_at` DESC', [...], false)
+ 5 APPPATH\Models\AtmLiquidationDetailModel.php(114): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\AccountingController.php(44): App\Models\AtmLiquidationDetailModel->getLiquidationsWithRecipients([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->approvedAtmLiquidations()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 05:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-02 05:39:05 --> ErrorException: Undefined array key "approved_at"
+[Method: GET, Route: chairman/approved-atm]
+in APPPATH\Views\chairman\approved_atm_liquidations.php on line 190.
+ 1 APPPATH\Views\chairman\approved_atm_liquidations.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "approved_at"', 'C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\chairman\\approved_atm_liquidations.php', 190)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\chairman\\approved_atm_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('chairman/approved_atm_liquidations', [], true)
+ 5 APPPATH\Controllers\ChairmanController.php(116): view('chairman/approved_atm_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChairmanController->approvedAtmLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChairmanController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 05:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:46:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 05:52:09 --> mysqli_sql_exception: Unknown column 'accounting_received_date' in 'field list' in C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `atm_liq...', 0)
+#1 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `atm_liq...')
+#2 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `atm_liq...')
+#3 C:\xampp\htdocs\sksu_liquid\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liq...', Array, false)
+#4 C:\xampp\htdocs\sksu_liquid\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\sksu_liquid\system\BaseModel.php(1031): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\sksu_liquid\system\Model.php(863): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\sksu_liquid\app\Controllers\AccountingController.php(238): CodeIgniter\Model->update('7', Array)
+#8 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+#9 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+#10 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sksu_liquid\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sksu_liquid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sksu_liquid\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-12-02 05:52:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accounting_received_date' in 'field list'
+[Method: POST, Route: accounting/receive-atm]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liquidation_details` SET `status` = :status:, `accounting_received_date` = :accounting_received_date:, `updated_at` = :updated_at:
+WHERE `atm_liquidation_details`.`id` IN :atm_liquidation_details.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\AccountingController.php(238): CodeIgniter\Model->update('7', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:52:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accounting_received_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:52:09\', `updated_at` = \'2025-12-02 05:52:09\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:52:09\', `updated_at` = \'2025-12-02 05:52:09\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liquidation_details` SET `status` = :status:, `accounting_received_date` = :accounting_received_date:, `updated_at` = :updated_at:
+WHERE `atm_liquidation_details`.`id` IN :atm_liquidation_details.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\AccountingController.php(238): CodeIgniter\Model->update('7', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:52:09 --> [Caused by] mysqli_sql_exception: Unknown column 'accounting_received_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:52:09\', `updated_at` = \'2025-12-02 05:52:09\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:52:09\', `updated_at` = \'2025-12-02 05:52:09\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:52:09\', `updated_at` = \'2025-12-02 05:52:09\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liquidation_details` SET `status` = :status:, `accounting_received_date` = :accounting_received_date:, `updated_at` = :updated_at:
+WHERE `atm_liquidation_details`.`id` IN :atm_liquidation_details.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\AccountingController.php(238): CodeIgniter\Model->update('7', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 05:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 05:54:34 --> mysqli_sql_exception: Unknown column 'accounting_received_date' in 'field list' in C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sksu_liquid\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `atm_liq...', 0)
+#1 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `atm_liq...')
+#2 C:\xampp\htdocs\sksu_liquid\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `atm_liq...')
+#3 C:\xampp\htdocs\sksu_liquid\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liq...', Array, false)
+#4 C:\xampp\htdocs\sksu_liquid\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\sksu_liquid\system\BaseModel.php(1031): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\sksu_liquid\system\Model.php(863): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\sksu_liquid\app\Controllers\AccountingController.php(239): CodeIgniter\Model->update('7', Array)
+#8 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+#9 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+#10 C:\xampp\htdocs\sksu_liquid\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sksu_liquid\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sksu_liquid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sksu_liquid\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-12-02 05:54:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accounting_received_date' in 'field list'
+[Method: POST, Route: accounting/receive-atm]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liquidation_details` SET `status` = :status:, `accounting_received_date` = :accounting_received_date:, `updated_at` = :updated_at:
+WHERE `atm_liquidation_details`.`id` IN :atm_liquidation_details.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\AccountingController.php(239): CodeIgniter\Model->update('7', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:54:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accounting_received_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:54:34\', `updated_at` = \'2025-12-02 05:54:34\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:54:34\', `updated_at` = \'2025-12-02 05:54:34\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liquidation_details` SET `status` = :status:, `accounting_received_date` = :accounting_received_date:, `updated_at` = :updated_at:
+WHERE `atm_liquidation_details`.`id` IN :atm_liquidation_details.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\AccountingController.php(239): CodeIgniter\Model->update('7', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-02 05:54:34 --> [Caused by] mysqli_sql_exception: Unknown column 'accounting_received_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:54:34\', `updated_at` = \'2025-12-02 05:54:34\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:54:34\', `updated_at` = \'2025-12-02 05:54:34\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `atm_liquidation_details` SET `status` = \'sent_to_accounting\', `accounting_received_date` = \'2025-12-02 05:54:34\', `updated_at` = \'2025-12-02 05:54:34\'
+WHERE `atm_liquidation_details`.`id` IN (\'7\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `atm_liquidation_details` SET `status` = :status:, `accounting_received_date` = :accounting_received_date:, `updated_at` = :updated_at:
+WHERE `atm_liquidation_details`.`id` IN :atm_liquidation_details.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\AccountingController.php(239): CodeIgniter\Model->update('7', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->receiveAtmLiquidation()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 05:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 05:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 05:59:19 --> Batch status is not approved: completed for batch ID: 2
+DEBUG - 2025-12-02 05:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-02 05:59:24 --> Batch status is not approved: completed for batch ID: 2
+DEBUG - 2025-12-02 06:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-02 06:24:13 --> File uploaded successfully: C:\xampp\htdocs\sksu_liquid\writable\uploads/atm_liquidations/1764656653_d5c7d88218c0bdd5151c.pdf
+INFO - 2025-12-02 06:24:13 --> ATM liquidation created successfully: ID 14
+DEBUG - 2025-12-02 06:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-02 06:40:10 --> Parsed records from file: [{"recipient_code":"SKSU-2024-001","transaction_date":"2025-12-01","amount":"5000.00","reference_number":"REF-12345"},{"recipient_code":"SKSU-2024-002","transaction_date":"2025-12-01","amount":"5000.00","reference_number":"REF-12346"},{"recipient_code":"SKSU-2024-003","transaction_date":"2025-12-01","amount":"5000.00","reference_number":"REF-12347"}]
+INFO - 2025-12-02 06:40:10 --> Processing 3 records from batch upload
+INFO - 2025-12-02 06:40:10 --> Row 2: Successfully created liquidation for SKSU-2024-001
+INFO - 2025-12-02 06:40:10 --> Row 3: Successfully created liquidation for SKSU-2024-002
+INFO - 2025-12-02 06:40:10 --> Row 4: Successfully created liquidation for SKSU-2024-003
+DEBUG - 2025-12-02 06:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-02 06:40:46 --> Parsed records from file: [{"recipient_code":"SKSU-2024-001","transaction_date":"2025-12-01","amount":"5000.00","reference_number":"REF-12345"},{"recipient_code":"SKSU-2024-002","transaction_date":"2025-12-01","amount":"5000.00","reference_number":"REF-12346"},{"recipient_code":"SKSU-2024-003","transaction_date":"2025-12-01","amount":"5000.00","reference_number":"REF-12347"}]
+INFO - 2025-12-02 06:40:46 --> Processing 3 records from batch upload
+INFO - 2025-12-02 06:40:46 --> Row 2: Successfully created liquidation for SKSU-2024-001
+INFO - 2025-12-02 06:40:46 --> Row 3: Successfully created liquidation for SKSU-2024-002
+INFO - 2025-12-02 06:40:46 --> Row 4: Successfully created liquidation for SKSU-2024-003
+DEBUG - 2025-12-02 06:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-02 06:42:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "accounting/view_manual_liquidation.php"
+[Method: GET, Route: accounting/manual/8]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('accounting/view_manual_liquidation.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('accounting/view_manual_liquidation', [], true)
+ 3 APPPATH\Controllers\AccountingController.php(204): view('accounting/view_manual_liquidation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->viewManualLiquidation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 06:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-02 06:43:31 --> ErrorException: Undefined array key "transaction_date"
+[Method: GET, Route: accounting/manual/8]
+in APPPATH\Views\accounting\view_manual_liquidation.php on line 71.
+ 1 APPPATH\Views\accounting\view_manual_liquidation.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "transaction_date"', 'C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\accounting\\view_manual_liquidation.php', 71)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\accounting\\view_manual_liquidation.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('accounting/view_manual_liquidation', [], true)
+ 5 APPPATH\Controllers\AccountingController.php(204): view('accounting/view_manual_liquidation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AccountingController->viewManualLiquidation('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AccountingController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 06:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 06:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 06:59:02 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 06:59:02 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 06:59:02 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 06:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 06:59:42 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 06:59:42 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 06:59:42 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:00:55 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:00:55 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:00:55 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:00:57 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:00:57 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:00:57 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:03:47 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:03:47 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:03:47 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:04:29 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:04:29 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:04:29 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 163.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(163): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:52:43 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:52:43 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:52:43 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:53:46 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:53:46 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:53:46 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:54:06 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\manual_liquidation\show.php on line 211.
+ 1 APPPATH\Views\manual_liquidation\show.php(211): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\manual_liquidation\\show.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('manual_liquidation/show', [], true)
+ 5 APPPATH\Controllers\ManualLiquidationController.php(139): view('manual_liquidation/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManualLiquidationController->show('4')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManualLiquidationController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:54:37 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:54:37 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:54:37 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:55:52 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:55:52 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:55:52 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:56:59 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:56:59 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:56:59 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:57:04 --> Update Status - ID: 4, Status: approved
+ERROR - 2025-12-02 07:57:04 --> Access denied for liquidation ID 4
+DEBUG - 2025-12-02 07:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-02 07:58:46 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:58:46 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-12-02 07:58:46 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Views\scholarship_coordinator\my_liquidations.php on line 140.
+ 1 APPPATH\Views\scholarship_coordinator\my_liquidations.php(140): strtotime(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sksu_liquid\\app\\Views\\scholarship_coordinator\\my_liquidations.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('scholarship_coordinator/my_liquidations', [], true)
+ 5 APPPATH\Controllers\ScholarshipCoordinatorController.php(133): view('scholarship_coordinator/my_liquidations', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ScholarshipCoordinatorController->myLiquidations()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScholarshipCoordinatorController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-02 07:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:58:51 --> Update Status - ID: 4, Status: approved
+ERROR - 2025-12-02 07:58:51 --> Access denied for liquidation ID 4
+DEBUG - 2025-12-02 07:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 07:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 08:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-02 08:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -134,12 +134,16 @@ $routes->group('accounts', function($routes) {
 $routes->group('accounting', function($routes) {
     $routes->get('/', 'AccountingController::index');
     $routes->get('atm-approved', 'AccountingController::approvedAtmLiquidations');
+    $routes->get('atm-liquidations', 'AccountingController::approvedAtmLiquidations');
     $routes->get('atm-received', 'AccountingController::receivedAtmLiquidations');
     $routes->get('manual-approved', 'AccountingController::approvedManualLiquidations');
     $routes->get('atm/(:num)', 'AccountingController::viewAtmLiquidation/$1');
+    $routes->get('atm-batch/(:num)', 'AccountingController::viewAtmBatch/$1');
     $routes->get('manual/(:num)', 'AccountingController::viewManualLiquidation/$1');
     $routes->post('receive-atm', 'AccountingController::receiveAtmLiquidation');
+    $routes->post('receive-atm-batch', 'AccountingController::receiveAtmBatch');
     $routes->post('complete-atm', 'AccountingController::completeAtmLiquidation');
+    $routes->post('complete-atm-batch', 'AccountingController::completeAtmBatch');
     $routes->get('dashboard-data', 'AccountingController::getDashboardData');
 });
 
@@ -149,4 +153,16 @@ $routes->group('officer', function($routes) {
     $routes->get('pending-items', 'OfficerController::pendingItems');
     $routes->post('search-items', 'OfficerController::searchItems');
     $routes->post('process-item', 'OfficerController::processItem');
+});
+
+// Scholarship Coordinator routes
+$routes->group('scholarship-coordinator', function($routes) {
+    $routes->get('/', 'ScholarshipCoordinatorController::index');
+    $routes->get('my-liquidations', 'ScholarshipCoordinatorController::myLiquidations');
+    $routes->get('campus-overview', 'ScholarshipCoordinatorController::campusOverview');
+    $routes->get('manage-liquidations', 'ScholarshipCoordinatorController::manageLiquidations');
+    $routes->get('review/(:num)', 'ScholarshipCoordinatorController::reviewLiquidation/$1');
+    $routes->post('update-liquidation-status', 'ScholarshipCoordinatorController::updateLiquidationStatus');
+    $routes->post('update-status', 'ScholarshipCoordinatorController::updateLiquidationStatus');
+    $routes->get('reports', 'ScholarshipCoordinatorController::reports');
 });

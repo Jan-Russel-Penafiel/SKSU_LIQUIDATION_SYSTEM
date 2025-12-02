@@ -37,8 +37,11 @@ class AccountingController extends BaseController
             return redirect()->to('/dashboard')->with('error', 'Access denied. Accounting officer privileges required.');
         }
 
-        // Get approved ATM liquidations
-        $liquidations = $this->atmLiquidationModel->getBatchesWithUploader(['status' => 'approved']);
+        // Load the detail model to get individual records
+        $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+        
+        // Get approved liquidations (both individual and batch records)
+        $liquidations = $atmDetailModel->getLiquidationsWithRecipients(['status' => 'approved']);
 
         $data = [
             'title' => 'Approved ATM Liquidations',
@@ -55,8 +58,11 @@ class AccountingController extends BaseController
             return redirect()->to('/dashboard')->with('error', 'Access denied. Accounting officer privileges required.');
         }
 
-        // Get liquidations sent to accounting
-        $liquidations = $this->atmLiquidationModel->getBatchesWithUploader(['status' => 'sent_to_accounting']);
+        // Load detail model
+        $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+        
+        // Get all liquidations (individual and batch) sent to accounting
+        $liquidations = $atmDetailModel->getLiquidationsWithRecipients(['status' => 'sent_to_accounting']);
 
         $data = [
             'title' => 'Received ATM Liquidations',
@@ -91,7 +97,23 @@ class AccountingController extends BaseController
             return redirect()->to('/dashboard')->with('error', 'Access denied. Accounting officer privileges required.');
         }
 
-        $liquidation = $this->atmLiquidationModel->find($id);
+        // Load detail model
+        $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+        
+        // Get individual liquidation with recipient details
+        $builder = $atmDetailModel->db->table('atm_liquidation_details ald');
+        $builder->select('ald.*, 
+            sr.recipient_id as recipient_code, 
+            CONCAT(sr.first_name, " ", sr.last_name) as recipient_name,
+            sr.first_name, 
+            sr.last_name, 
+            sr.campus,
+            u.username as created_by_name');
+        $builder->join('scholarship_recipients sr', 'ald.recipient_id = sr.id', 'left');
+        $builder->join('users u', 'ald.created_by = u.id', 'left');
+        $builder->where('ald.id', $id);
+        
+        $liquidation = $builder->get()->getRowArray();
         
         if (!$liquidation) {
             return redirect()->back()->with('error', 'Liquidation not found.');
@@ -111,6 +133,51 @@ class AccountingController extends BaseController
         return view('accounting/view_atm_liquidation', $data);
     }
 
+    public function viewAtmBatch($id)
+    {
+        if (!$this->isAccountingOfficer()) {
+            return redirect()->to('/dashboard')->with('error', 'Access denied. Accounting officer privileges required.');
+        }
+
+        // Get batch information
+        $batch = $this->atmLiquidationModel->find($id);
+        
+        if (!$batch) {
+            return redirect()->back()->with('error', 'Batch not found.');
+        }
+
+        // Only show approved or received batches
+        if (!in_array($batch['status'], ['approved', 'sent_to_accounting', 'completed'])) {
+            return redirect()->back()->with('error', 'Access denied. Batch not approved.');
+        }
+
+        // Get all recipients in this batch
+        $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+        $builder = $atmDetailModel->db->table('atm_liquidation_details ald');
+        $builder->select('ald.*, 
+            sr.recipient_id as recipient_code,
+            CONCAT(sr.first_name, " ", sr.last_name) as recipient_name,
+            sr.campus');
+        $builder->join('scholarship_recipients sr', 'ald.recipient_id = sr.id', 'left');
+        $builder->where('ald.atm_liquidation_id', $id);
+        $builder->orderBy('sr.last_name', 'ASC');
+        
+        $details = $builder->get()->getResultArray();
+        
+        // Calculate total amount
+        $totalAmount = array_sum(array_column($details, 'amount'));
+
+        $data = [
+            'title' => 'View Batch ATM Liquidation',
+            'user' => session()->get('user'),
+            'batch' => $batch,
+            'details' => $details,
+            'totalAmount' => $totalAmount
+        ];
+
+        return view('accounting/view_atm_batch', $data);
+    }
+
     public function viewManualLiquidation($id)
     {
         if (!$this->isAccountingOfficer()) {
@@ -123,9 +190,10 @@ class AccountingController extends BaseController
             return redirect()->back()->with('error', 'Liquidation not found.');
         }
 
-        // Only show approved liquidations
-        if ($liquidation['status'] !== 'approved') {
-            return redirect()->back()->with('error', 'Access denied. Liquidation not approved.');
+        // Only show approved or processing liquidations
+        $allowedStatuses = ['approved', 'sent_to_accounting', 'completed'];
+        if (!in_array($liquidation['status'], $allowedStatuses)) {
+            return redirect()->back()->with('error', 'Access denied. Liquidation not available for accounting.');
         }
 
         $data = [
@@ -143,22 +211,107 @@ class AccountingController extends BaseController
             return $this->response->setJSON(['success' => false, 'message' => 'Access denied.']);
         }
 
-        $id = $this->request->getPost('id');
-        $remarks = $this->request->getPost('remarks');
+        try {
+            $id = $this->request->getPost('id');
+            $remarks = $this->request->getPost('remarks');
 
-        if (!$id) {
-            return $this->response->setJSON(['success' => false, 'message' => 'Invalid liquidation ID.']);
+            if (!$id) {
+                return $this->response->setJSON(['success' => false, 'message' => 'Invalid liquidation ID.']);
+            }
+
+            // Load detail model for individual records
+            $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+            $liquidation = $atmDetailModel->find($id);
+            
+            if (!$liquidation || $liquidation['status'] !== 'approved') {
+                return $this->response->setJSON(['success' => false, 'message' => 'Invalid liquidation or not approved.']);
+            }
+
+            // Update individual record status and received date
+            $updateData = [
+                'status' => 'sent_to_accounting',
+                'accounting_received_date' => date('Y-m-d H:i:s')
+            ];
+            
+            if (!empty($remarks)) {
+                $updateData['remarks'] = $remarks;
+            }
+
+            // Skip validation on update to avoid required field issues
+            if ($atmDetailModel->skipValidation(true)->update($id, $updateData)) {
+                return $this->response->setJSON(['success' => true, 'message' => 'Liquidation received successfully.']);
+            } else {
+                $errors = $atmDetailModel->errors();
+                log_message('error', 'Failed to update liquidation: ' . json_encode($errors));
+                return $this->response->setJSON(['success' => false, 'message' => 'Failed to receive liquidation.']);
+            }
+        } catch (\Exception $e) {
+            log_message('error', 'Exception in receiveAtmLiquidation: ' . $e->getMessage());
+            return $this->response->setJSON(['success' => false, 'message' => 'An error occurred: ' . $e->getMessage()]);
+        }
+    }
+
+    public function receiveAtmBatch()
+    {
+        if (!$this->isAccountingOfficer()) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Access denied.']);
         }
 
-        $liquidation = $this->atmLiquidationModel->find($id);
-        if (!$liquidation || $liquidation['status'] !== 'approved') {
-            return $this->response->setJSON(['success' => false, 'message' => 'Invalid liquidation or not approved.']);
-        }
+        try {
+            $id = $this->request->getPost('id');
+            $remarks = $this->request->getPost('remarks');
 
-        if ($this->atmLiquidationModel->updateStatus($id, 'sent_to_accounting', $remarks)) {
-            return $this->response->setJSON(['success' => true, 'message' => 'Liquidation received successfully.']);
-        } else {
-            return $this->response->setJSON(['success' => false, 'message' => 'Failed to receive liquidation.']);
+            if (!$id) {
+                return $this->response->setJSON(['success' => false, 'message' => 'Invalid batch ID.']);
+            }
+
+            $batch = $this->atmLiquidationModel->find($id);
+            if (!$batch) {
+                log_message('error', 'Batch not found: ' . $id);
+                return $this->response->setJSON(['success' => false, 'message' => 'Batch not found.']);
+            }
+            
+            if ($batch['status'] !== 'approved') {
+                log_message('error', 'Batch status is not approved: ' . $batch['status'] . ' for batch ID: ' . $id);
+                return $this->response->setJSON(['success' => false, 'message' => 'Invalid batch or not approved. Current status: ' . $batch['status']]);
+            }
+
+            // Update the batch record
+            $updateData = [
+                'status' => 'sent_to_accounting',
+                'accounting_received_date' => date('Y-m-d H:i:s')
+            ];
+            
+            if (!empty($remarks)) {
+                $updateData['remarks'] = $remarks;
+            }
+
+            // Update the batch header (skip validation)
+            if (!$this->atmLiquidationModel->skipValidation(true)->update($id, $updateData)) {
+                log_message('error', 'Failed to update batch: ' . json_encode($this->atmLiquidationModel->errors()));
+                return $this->response->setJSON(['success' => false, 'message' => 'Failed to receive batch.']);
+            }
+
+            // Update all detail records in this batch
+            $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+            $detailData = [
+                'status' => 'sent_to_accounting',
+                'accounting_received_date' => date('Y-m-d H:i:s')
+            ];
+            
+            if (!empty($remarks)) {
+                $detailData['remarks'] = $remarks;
+            }
+            
+            $atmDetailModel->where('atm_liquidation_id', $id)
+                           ->where('status', 'approved')
+                           ->set($detailData)
+                           ->update();
+
+            return $this->response->setJSON(['success' => true, 'message' => 'Batch received successfully.']);
+        } catch (\Exception $e) {
+            log_message('error', 'Exception in receiveAtmBatch: ' . $e->getMessage());
+            return $this->response->setJSON(['success' => false, 'message' => 'An error occurred: ' . $e->getMessage()]);
         }
     }
 
@@ -175,15 +328,78 @@ class AccountingController extends BaseController
             return $this->response->setJSON(['success' => false, 'message' => 'Invalid liquidation ID.']);
         }
 
-        $liquidation = $this->atmLiquidationModel->find($id);
+        // Load detail model for individual records
+        $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+        $liquidation = $atmDetailModel->find($id);
+        
         if (!$liquidation || $liquidation['status'] !== 'sent_to_accounting') {
             return $this->response->setJSON(['success' => false, 'message' => 'Invalid liquidation or not received.']);
         }
 
-        if ($this->atmLiquidationModel->updateStatus($id, 'completed', $remarks)) {
+        $data = [
+            'status' => 'completed',
+            'completed_at' => date('Y-m-d H:i:s')
+        ];
+        
+        if (!empty($remarks)) {
+            $data['remarks'] = $remarks;
+        }
+
+        if ($atmDetailModel->skipValidation(true)->update($id, $data)) {
             return $this->response->setJSON(['success' => true, 'message' => 'Liquidation completed successfully.']);
         } else {
             return $this->response->setJSON(['success' => false, 'message' => 'Failed to complete liquidation.']);
+        }
+    }
+
+    public function completeAtmBatch()
+    {
+        if (!$this->isAccountingOfficer()) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Access denied.']);
+        }
+
+        $batchId = $this->request->getPost('id');
+        $remarks = $this->request->getPost('remarks');
+
+        if (!$batchId) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Invalid batch ID.']);
+        }
+
+        // Check if batch exists and is in sent_to_accounting status
+        $batch = $this->atmLiquidationModel->find($batchId);
+        if (!$batch || $batch['status'] !== 'sent_to_accounting') {
+            return $this->response->setJSON(['success' => false, 'message' => 'Invalid batch or not received.']);
+        }
+
+        // Update all detail records in this batch
+        $atmDetailModel = new \App\Models\AtmLiquidationDetailModel();
+        $detailData = [
+            'status' => 'completed',
+            'completed_at' => date('Y-m-d H:i:s')
+        ];
+        
+        if (!empty($remarks)) {
+            $detailData['remarks'] = $remarks;
+        }
+        
+        $atmDetailModel->where('atm_liquidation_id', $batchId)
+                       ->where('status', 'sent_to_accounting')
+                       ->set($detailData)
+                       ->update();
+
+        // Update batch status
+        $batchData = [
+            'status' => 'completed'
+        ];
+        
+        if (!empty($remarks)) {
+            $batchData['remarks'] = $remarks;
+        }
+
+        if ($this->atmLiquidationModel->skipValidation(true)->update($batchId, $batchData)) {
+            return $this->response->setJSON(['success' => true, 'message' => 'Batch completed successfully.']);
+        } else {
+            return $this->response->setJSON(['success' => false, 'message' => 'Failed to complete batch.']);
         }
     }
 

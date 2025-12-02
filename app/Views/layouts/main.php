@@ -260,7 +260,7 @@
                         <span class="font-medium text-sm">Disbursement List</span>
                     </a>
                     
-                    <?php elseif ($user['role'] !== 'scholarship_chairman' && $user['role'] !== 'accounting_officer'): ?>
+                    <?php elseif ($user['role'] !== 'scholarship_chairman' && $user['role'] !== 'accounting_officer' && $user['role'] !== 'scholarship_coordinator'): ?>
                     <!-- Other roles (admin, administrator, etc.) - Show full menu -->
                     <a href="<?= base_url('dashboard') ?>" 
                        class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= uri_string() == 'dashboard' ? 'bg-white/20 shadow-md' : '' ?>">
@@ -392,6 +392,42 @@
                        class="flex items-center px-3 py-1.5 ml-3 text-green-100 rounded-lg hover:bg-white/10 transition-all duration-200">
                         <i class="bi bi-file-earmark-check mr-2 text-green-300 text-sm"></i>
                         <span class="text-sm">Manual Approved</span>
+                    </a>
+                    <?php endif; ?>
+                    
+                    <?php if ($user['role'] === 'scholarship_coordinator'): ?>
+                    <a href="<?= base_url('scholarship-coordinator') ?>" 
+                       class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= uri_string() == 'scholarship-coordinator' ? 'bg-white/20 shadow-md' : '' ?>">
+                        <i class="bi bi-speedometer2 mr-2 text-green-200 text-sm"></i>
+                        <span class="font-medium text-sm">Dashboard</span>
+                    </a>
+                    
+                    <div class="pt-2">
+                        <h6 class="px-3 py-1 text-xs font-semibold text-green-200 uppercase tracking-wider">Coordinator Panel</h6>
+                    </div>
+                    
+                    <a href="<?= base_url('scholarship-coordinator/my-liquidations') ?>" 
+                       class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= strpos(uri_string(), 'scholarship-coordinator/my-liquidations') !== false ? 'bg-white/20 shadow-md' : '' ?>">
+                        <i class="bi bi-list-task mr-2 text-green-200 text-sm"></i>
+                        <span class="font-medium text-sm">My Liquidations</span>
+                    </a>
+                    
+                    <a href="<?= base_url('scholarship-coordinator/campus-overview') ?>" 
+                       class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= strpos(uri_string(), 'scholarship-coordinator/campus-overview') !== false ? 'bg-white/20 shadow-md' : '' ?>">
+                        <i class="bi bi-building mr-2 text-green-200 text-sm"></i>
+                        <span class="font-medium text-sm">Campus Overview</span>
+                    </a>
+                    
+                    <a href="<?= base_url('scholarship-coordinator/manage-liquidations') ?>" 
+                       class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= strpos(uri_string(), 'scholarship-coordinator/manage-liquidations') !== false ? 'bg-white/20 shadow-md' : '' ?>">
+                        <i class="bi bi-gear mr-2 text-green-200 text-sm"></i>
+                        <span class="font-medium text-sm">Manage Liquidations</span>
+                    </a>
+                    
+                    <a href="<?= base_url('scholarship-coordinator/reports') ?>" 
+                       class="flex items-center px-3 py-2 text-white rounded-lg hover:bg-white/10 transition-all duration-200 <?= strpos(uri_string(), 'scholarship-coordinator/reports') !== false ? 'bg-white/20 shadow-md' : '' ?>">
+                        <i class="bi bi-file-earmark-bar-graph mr-2 text-green-200 text-sm"></i>
+                        <span class="font-medium text-sm">Reports</span>
                     </a>
                     <?php endif; ?>
                 </nav>

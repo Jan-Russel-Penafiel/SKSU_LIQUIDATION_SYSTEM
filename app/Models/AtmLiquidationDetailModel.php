@@ -17,7 +17,7 @@ class AtmLiquidationDetailModel extends Model
         'atm_liquidation_id', 'recipient_id', 'transaction_date', 'amount',
         'reference_number', 'file_path', 'file_type', 'status', 'semester', 
         'academic_year', 'remarks', 'created_by', 'verified_by', 'verified_at',
-        'approved_by', 'approved_at'
+        'approved_by', 'approved_at', 'accounting_received_date', 'completed_at'
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -40,7 +40,7 @@ class AtmLiquidationDetailModel extends Model
         'amount' => 'required|decimal|greater_than[0]',
         'semester' => 'required|max_length[20]',
         'academic_year' => 'required|max_length[20]',
-        'status' => 'required|in_list[pending,verified,approved,rejected]',
+        'status' => 'required|in_list[pending,verified,approved,rejected,sent_to_accounting,completed]',
         'created_by' => 'required|numeric'
     ];
     
@@ -79,11 +79,25 @@ class AtmLiquidationDetailModel extends Model
             sr.first_name, 
             sr.last_name, 
             sr.middle_name, 
-            sr.campus');
+            sr.campus,
+            al.batch_name,
+            al.file_type,
+            al.status as batch_status,
+            u.username as uploader_name');
         $builder->join('scholarship_recipients sr', 'ald.recipient_id = sr.id', 'left');
+        $builder->join('atm_liquidations al', 'ald.atm_liquidation_id = al.id', 'left');
+        $builder->join('users u', 'al.uploaded_by = u.id', 'left');
 
         if (isset($filters['status']) && !empty($filters['status'])) {
             $builder->where('ald.status', $filters['status']);
+            
+            // For approved status, also filter out batches that have been processed
+            if ($filters['status'] === 'approved') {
+                $builder->groupStart();
+                    $builder->where('ald.atm_liquidation_id IS NULL'); // Individual records
+                    $builder->orWhere('al.status', 'approved'); // Or batch records where batch is also approved
+                $builder->groupEnd();
+            }
         }
 
         if (isset($filters['semester']) && !empty($filters['semester'])) {
