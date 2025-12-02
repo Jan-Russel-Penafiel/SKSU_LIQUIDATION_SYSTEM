@@ -169,6 +169,30 @@
                 <p class="text-gray-600">No data found for the selected filters and report type.</p>
             </div>
         <?php else: ?>
+            <!-- Report Summary -->
+            <div class="mb-8 bg-gray-50 rounded-lg p-6">
+                <h4 class="text-lg font-medium text-gray-900 mb-4">Report Summary</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-blue-600"><?= count($report_data) ?></div>
+                        <div class="text-sm text-gray-600">Total Records</div>
+                    </div>
+                    <?php if (isset($report_data[0]['total_amount'])): ?>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-600">
+                            ₱<?= number_format(array_sum(array_column($report_data, 'total_amount')), 2) ?>
+                        </div>
+                        <div class="text-sm text-gray-600">Total Amount</div>
+                    </div>
+                    <?php endif; ?>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-purple-600">
+                            <?= date('M j, Y') ?>
+                        </div>
+                        <div class="text-sm text-gray-600">Generated On</div>
+                    </div>
+                </div>
+            </div>
             <div class="overflow-x-auto">
                 <!-- Submissions by Recipient Report -->
                 <?php if ($filters['report_type'] === 'submissions_by_recipient'): ?>
@@ -548,31 +572,6 @@
                         </tbody>
                     </table>
                 <?php endif; ?>
-            </div>
-
-            <!-- Report Summary -->
-            <div class="mt-8 bg-gray-50 rounded-lg p-6">
-                <h4 class="text-lg font-medium text-gray-900 mb-4">Report Summary</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-blue-600"><?= count($report_data) ?></div>
-                        <div class="text-sm text-gray-600">Total Records</div>
-                    </div>
-                    <?php if (isset($report_data[0]['total_amount'])): ?>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-green-600">
-                            ₱<?= number_format(array_sum(array_column($report_data, 'total_amount')), 2) ?>
-                        </div>
-                        <div class="text-sm text-gray-600">Total Amount</div>
-                    </div>
-                    <?php endif; ?>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-purple-600">
-                            <?= date('M j, Y') ?>
-                        </div>
-                        <div class="text-sm text-gray-600">Generated On</div>
-                    </div>
-                </div>
             </div>
         <?php endif; ?>
     </div>

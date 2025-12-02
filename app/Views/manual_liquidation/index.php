@@ -119,10 +119,6 @@
                     <button onclick="printByCampus()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center text-sm">
                         <i class="bi bi-building mr-2"></i>Print by Campus
                     </button>
-                    
-                    <button onclick="printCurrentView()" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center text-sm">
-                        <i class="bi bi-list-ul mr-2"></i>Print Current View
-                    </button>
                 </div>
 
                 <!-- Bulk Actions -->
@@ -453,53 +449,6 @@ function printByCampus() {
     
     // Save the PDF
     doc.save('liquidation-by-campus-' + new Date().toISOString().slice(0, 10) + '.pdf');
-}
-
-function printCurrentView() {
-    // Hide elements that shouldn't be printed
-    const elementsToHide = [
-        '.no-print',
-        '#bulk-actions',
-        'nav',
-        '.pagination',
-        '.btn',
-        'button'
-    ];
-    
-    elementsToHide.forEach(selector => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(el => {
-            el.style.display = 'none';
-        });
-    });
-    
-    // Add print styles
-    const printStyles = document.createElement('style');
-    printStyles.innerHTML = `
-        @media print {
-            body { font-size: 12px; }
-            table { font-size: 10px; }
-            .bg-white { background: white !important; }
-            .text-white { color: black !important; }
-            .rounded-2xl { border-radius: 0 !important; }
-            .shadow-lg { box-shadow: none !important; }
-        }
-    `;
-    document.head.appendChild(printStyles);
-    
-    // Print the page
-    window.print();
-    
-    // Restore hidden elements after printing
-    setTimeout(() => {
-        elementsToHide.forEach(selector => {
-            const elements = document.querySelectorAll(selector);
-            elements.forEach(el => {
-                el.style.display = '';
-            });
-        });
-        document.head.removeChild(printStyles);
-    }, 500);
 }
 
 // Bulk operations functionality

@@ -17,11 +17,6 @@
     </div>
     
     <div class="flex flex-col sm:flex-row gap-3">
-        <button onclick="showBulkActions()" 
-                class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center text-sm">
-            <i class="bi bi-check2-square mr-2"></i>
-            Bulk Actions
-        </button>
         <a href="<?= base_url('manual-liquidation/create') ?>" 
            class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center text-sm">
             <i class="bi bi-plus-circle mr-2"></i>
@@ -78,11 +73,11 @@
             </form>
         </div>
 
-        <!-- Bulk Actions Panel (Hidden by default) -->
-        <div id="bulkActionsPanel" class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-6 hidden">
+        <!-- Bulk Actions Panel (Always visible) -->
+        <div id="bulkActionsPanel" class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
-                    <span class="text-sm font-medium text-yellow-800">
+                    <span class="text-sm font-medium text-blue-800">
                         <span id="selectedCount">0</span> liquidation(s) selected
                     </span>
                     <div class="flex space-x-2">
@@ -100,9 +95,6 @@
                         </button>
                     </div>
                 </div>
-                <button onclick="hideBulkActions()" class="text-yellow-600 hover:text-yellow-800">
-                    <i class="bi bi-x-lg"></i>
-                </button>
             </div>
         </div>
 
@@ -298,28 +290,23 @@
 let currentAction = null;
 let selectedLiquidations = [];
 
-function showBulkActions() {
-    document.getElementById('bulkActionsPanel').classList.remove('hidden');
-}
-
-function hideBulkActions() {
-    document.getElementById('bulkActionsPanel').classList.add('hidden');
-    // Uncheck all checkboxes
-    document.querySelectorAll('.liquidation-checkbox').forEach(cb => cb.checked = false);
-    document.getElementById('selectAll').checked = false;
-    selectedLiquidations = [];
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the page
     updateBulkActions();
-}
+});
 
 function toggleSelectAll() {
     const selectAll = document.getElementById('selectAll');
     const checkboxes = document.querySelectorAll('.liquidation-checkbox');
     
-    checkboxes.forEach(cb => {
-        cb.checked = selectAll.checked;
-    });
-    
-    updateBulkActions();
+    if (selectAll && checkboxes.length > 0) {
+        checkboxes.forEach(cb => {
+            cb.checked = selectAll.checked;
+        });
+        
+        updateBulkActions();
+    }
 }
 
 function updateBulkActions() {
@@ -328,10 +315,9 @@ function updateBulkActions() {
         .filter(cb => cb.checked)
         .map(cb => cb.value);
     
-    document.getElementById('selectedCount').textContent = selectedLiquidations.length;
-    
-    if (selectedLiquidations.length > 0) {
-        showBulkActions();
+    const selectedCountElement = document.getElementById('selectedCount');
+    if (selectedCountElement) {
+        selectedCountElement.textContent = selectedLiquidations.length;
     }
 }
 
@@ -357,6 +343,11 @@ function showModal(status, count) {
     const modalMessage = document.getElementById('modalMessage');
     const confirmBtn = document.getElementById('confirmBtn');
     
+    if (!modal || !modalTitle || !modalMessage || !confirmBtn) {
+        console.error('Modal elements not found');
+        return;
+    }
+    
     modalTitle.textContent = `${status.charAt(0).toUpperCase() + status.slice(1)} Liquidation${count > 1 ? 's' : ''}`;
     modalMessage.textContent = `Are you sure you want to ${status} ${count} liquidation${count > 1 ? 's' : ''}?`;
     
@@ -371,15 +362,23 @@ function showModal(status, count) {
 }
 
 function closeModal() {
-    document.getElementById('statusModal').classList.add('hidden');
-    document.getElementById('remarksInput').value = '';
+    const modal = document.getElementById('statusModal');
+    const remarksInput = document.getElementById('remarksInput');
+    
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+    if (remarksInput) {
+        remarksInput.value = '';
+    }
     currentAction = null;
 }
 
 function confirmAction() {
     if (!currentAction) return;
     
-    const remarks = document.getElementById('remarksInput').value;
+    const remarksInput = document.getElementById('remarksInput');
+    const remarks = remarksInput ? remarksInput.value : '';
     const ids = selectedLiquidations.join(',');
     
     fetch('<?= base_url('scholarship-coordinator/update-status') ?>', {
@@ -393,7 +392,14 @@ function confirmAction() {
     .then(data => {
         if (data.success) {
             closeModal();
-            hideBulkActions();
+            // Just reset the checkboxes, keep panel visible
+            document.querySelectorAll('.liquidation-checkbox').forEach(cb => cb.checked = false);
+            const selectAll = document.getElementById('selectAll');
+            if (selectAll) {
+                selectAll.checked = false;
+            }
+            selectedLiquidations = [];
+            updateBulkActions();
             location.reload();
         } else {
             alert('Error: ' + (data.message || 'Failed to update status'));
@@ -406,9 +412,14 @@ function confirmAction() {
 }
 
 // Close modal when clicking outside
-document.getElementById('statusModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeModal();
+document.addEventListener('DOMContentLoaded', function() {
+    const statusModal = document.getElementById('statusModal');
+    if (statusModal) {
+        statusModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
     }
 });
 </script>

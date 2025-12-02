@@ -279,49 +279,6 @@
                     </div>
                 </div>
 
-                <!-- Quick Actions -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-200/20 overflow-hidden">
-                    <div class="px-6 py-4 bg-gradient-to-r from-orange-600 to-orange-700">
-                        <h2 class="text-lg font-semibold text-white flex items-center">
-                            <i class="bi bi-lightning-fill mr-3"></i>
-                            Quick Actions
-                        </h2>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <a href="<?= base_url('manual-liquidation/create') ?>" 
-                           class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-colors group w-full">
-                            <div class="p-2 bg-blue-100 rounded-lg mr-3 group-hover:bg-blue-200">
-                                <i class="bi bi-plus-circle text-blue-600"></i>
-                            </div>
-                            <span class="text-sm font-medium text-gray-900">Create Liquidation</span>
-                        </a>
-                        
-                        <a href="<?= base_url('scholarship-coordinator/manage-liquidations?status=pending') ?>" 
-                           class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-yellow-50 hover:border-yellow-300 transition-colors group w-full">
-                            <div class="p-2 bg-yellow-100 rounded-lg mr-3 group-hover:bg-yellow-200">
-                                <i class="bi bi-clock text-yellow-600"></i>
-                            </div>
-                            <span class="text-sm font-medium text-gray-900">Review Pending</span>
-                        </a>
-                        
-                        <a href="<?= base_url('scholarship-coordinator/reports') ?>" 
-                           class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-green-50 hover:border-green-300 transition-colors group w-full">
-                            <div class="p-2 bg-green-100 rounded-lg mr-3 group-hover:bg-green-200">
-                                <i class="bi bi-graph-up text-green-600"></i>
-                            </div>
-                            <span class="text-sm font-medium text-gray-900">Campus Reports</span>
-                        </a>
-                        
-                        <a href="<?= base_url('manual-liquidation/entry-by-campus') ?>" 
-                           class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-purple-50 hover:border-purple-300 transition-colors group w-full">
-                            <div class="p-2 bg-purple-100 rounded-lg mr-3 group-hover:bg-purple-200">
-                                <i class="bi bi-building text-purple-600"></i>
-                            </div>
-                            <span class="text-sm font-medium text-gray-900">Bulk Entry</span>
-                        </a>
-                    </div>
-                </div>
-
                 <!-- Recent Disbursements -->
                 <?php if (!empty($campus_disbursements)): ?>
                 <div class="bg-white rounded-xl shadow-lg border border-gray-200/20 overflow-hidden">
